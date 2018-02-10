@@ -1,0 +1,19 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+
+html, body, h4, h5, h6, p {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/**
+ * Headers should generally use the same fonts.
+ */
+h1, h2, h3 {
+  font-family: 'Nunito', sans-serif;
+}

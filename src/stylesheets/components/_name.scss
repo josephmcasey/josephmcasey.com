@@ -1,0 +1,152 @@
+#shapes {
+  box-sizing: content-box;
+
+
+  .shape {
+    float: left;
+    margin-right: 5px;
+    position: relative;
+  }
+
+  .shape::before,
+  .shape::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+
+  .shape::before {
+    animation:  static1 2s;
+    animation-delay: 2s;
+  }
+
+  .shape::after {
+    animation:  static2 2s;
+    animation-delay: 2s;
+  }
+
+  #line {
+    border-top: solid 5px white;
+    border-bottom: solid 5px white;
+    border-left: solid 35px white;
+    width: 100%;
+    height: 15px;
+    margin: 12.5px 0;
+    position: absolute;
+  }
+
+  #triangle,
+  #triangle::before,
+  #triangle::after {
+    height: 0;
+    width: 0;
+    border: 0 solid transparent;
+    border-bottom: 50px solid black;
+    border-left-width: 50px;
+  }
+
+  #triangle::before {
+    border-bottom: 50px solid rgba(255,92,66,0.75);
+  }
+
+  #triangle::after {
+    border-bottom: 50px solid rgba(0,180,217,0.75);
+  }
+
+  #triangle::before,
+  #triangle::after {
+    margin-left: -50px;
+  }
+
+  #square,
+  #square::before,
+  #square::after {
+    height: 50px;
+    width: 50px;
+    background: #000;
+  }
+
+  #circle,
+  #circle::before,
+  #circle::after {
+    height: 50px;
+    width: 50px;
+    background: #000;
+    border-radius: 100px;
+  }
+
+  #circle::before,
+  #square::before {
+    background: rgba(255,92,66,0.75);
+  }
+
+  #circle::after,
+  #square::after {
+    background: rgba(0,180,217,0.75);
+  }
+
+  /* Animations */
+
+  /* static 1 */
+  @keyframes static1 {
+    0%, 100% {
+      top: 0;
+      left: 0;
+    }
+    20% {
+      top: -5px;
+      left: -5px;
+    }
+    40% {
+      top: 5px;
+      left: -5px;
+    }
+    60% {
+      top: 5px;
+      left: 5px;
+    }
+    80% {
+      top: 5px;
+      left: -5px;
+    }
+  }
+
+  /* static 2 */
+  @keyframes static2 {
+    0%, 100% {
+      top: 0;
+      left: 0;
+
+    }
+    20% {
+      top: 5px;
+      left: 5px;
+    }
+    40% {
+      top: -5px;
+      left: 5px;
+    }
+    60% {
+      top: -5px;
+      left: -5px;
+    }
+    80% {
+      top: -5px;
+      left: 5px;
+    }
+  }
+
+
+  /*  pause */
+  @keyframes pause {
+    0%, 100% {
+      opacity: 1;
+
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+}
