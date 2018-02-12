@@ -7,11 +7,13 @@ class Sidebar extends Component {
 
     render() {
         return (
-            <div className="sidebar-container">
-                <h1>Joseph Casey</h1>
-                <p>Developer, Originator, & Contriver. Search through my work below.</p>
-                <SearchBox defaultRefinement="Tech Articles" />
-            </div>
+            <header className="sidebar-container">
+                <div className="sidebar-content">
+                    <h1>Joseph Casey</h1>
+                    <p>Developer, Originator, & Contriver. Search through my work below.</p>
+                    <SearchBox defaultRefinement="Tech Articles" />
+                </div>
+            </header>
         )
     }
 }

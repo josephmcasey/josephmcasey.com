@@ -639,5 +639,7 @@ p {
     flex-wrap: nowrap; }
     .home-container .sidebar-container {
       flex: 40; }
+      .home-container .sidebar-container .sidebar-content {
+        position: fixed; }
     .home-container .search-result-container {
       flex: 60; } }

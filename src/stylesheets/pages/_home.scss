@@ -9,11 +9,8 @@
   & .sidebar-container, & .search-result-container {
     padding: 60px 45px;
   }
-}
 
-//------------------------------------
-// Medium Device Widths
-//------------------------------------
+}
 
 @include respond-to(medium) {
 
@@ -23,6 +20,10 @@
 
     & .sidebar-container {
       flex: 40;
+
+      & .sidebar-content{
+        position: fixed;
+      }
     }
     & .search-result-container {
       flex: 60;

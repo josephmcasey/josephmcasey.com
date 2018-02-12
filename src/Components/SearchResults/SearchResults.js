@@ -11,6 +11,16 @@ class Sidebar extends Component {
         return (
             <div className="search-result-container">
                 <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
+                <ContentCard/>
             </div>
         )
     }
