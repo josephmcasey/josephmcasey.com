@@ -1,73 +1,33 @@
 // -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
+// This file contains LAYOUT styles ONLY for CONTAINERS on the home page.
 // -----------------------------------------------------------------------------
 
-.arcade-machine {
-  display: grid;
-  grid-gap: 1px;
-  grid-template-columns: repeat(12, [col] auto );
-  grid-template-rows: repeat(3, [row] auto  );
+.home-container {
+  display: block;
   margin: auto;
-  background-color: black;
 
-  & > div {
-    background-color: darkslateblue;
-  }
-
-  & .marquee {
-    grid-column: col 1 / span  12;
-    grid-row: row ;
-  }
-  & .monitor {
-    background: repeating-linear-gradient(to bottom, #0f0a1e, #0f0a1e 2px, #140e29 2px, #140e29 4px);
-    grid-column: col / span 12;
-    grid-row: row 2 / span 5 ;
-  }
-  & .control-panel {
-    grid-column: col / span  12;
-    grid-row: row 6;
-    & .joystick {
-      /* xyz */
-    }
-    & .button {
-      /* xyz */
-    }
-  }
-  & .bottom-panel {
-    grid-column: col / span  12;
-    grid-row: row 7;
-    & .service-door {
-      /* xyz */
-    }
-    & .coin-door {
-      /* xyz */
-    }
-    & .speaker {
-      /* xyz */
-    }
+  & .sidebar-container, & .search-result-container {
+    padding: 60px 45px;
   }
 }
 
 //------------------------------------
-// Larger Landscape Devices
+// Medium Device Widths
 //------------------------------------
 
-@media only screen and (min-width: 1400px)  {
+@include respond-to(medium) {
 
-  .arcade-machine {
-    width: 1400px;
-    & .marquee {
-      height:400px;
+  .home-container{
+    display: flex;
+    flex-wrap: nowrap;
+
+    & .sidebar-container {
+      flex: 40;
     }
-    & .monitor {
-      height: 600px;
+    & .search-result-container {
+      flex: 60;
     }
-    & .control-panel {
-      height:400px;
-    }
-    & .bottom-panel {
-      height:400px;
-    }
+
   }
 
 }

@@ -1,6 +1,9 @@
-#shapes {
+#joe {
   box-sizing: content-box;
-
+  display: block;
+  margin: auto;
+  width: 165px;
+  height: 50px;
 
   .shape {
     float: left;
@@ -29,7 +32,7 @@
     border-top: solid 5px white;
     border-bottom: solid 5px white;
     border-left: solid 35px white;
-    width: 100%;
+    width: calc(100% - 35px);
     height: 15px;
     margin: 12.5px 0;
     position: absolute;
@@ -41,7 +44,7 @@
     height: 0;
     width: 0;
     border: 0 solid transparent;
-    border-bottom: 50px solid black;
+    border-bottom: 50px solid #4a4a4a;
     border-left-width: 50px;
   }
 
@@ -63,7 +66,7 @@
   #square::after {
     height: 50px;
     width: 50px;
-    background: #000;
+    background: #4a4a4a;
   }
 
   #circle,
@@ -71,7 +74,7 @@
   #circle::after {
     height: 50px;
     width: 50px;
-    background: #000;
+    background: #4a4a4a;
     border-radius: 100px;
   }
 

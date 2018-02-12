@@ -512,68 +512,72 @@ h1, h2, h3 {
 .git-keep {
   display: none; }
 
-#shapes {
+#joe {
   box-sizing: content-box;
+  display: block;
+  margin: auto;
+  width: 165px;
+  height: 50px;
   /* Animations */
   /* static 1 */
   /* static 2 */
   /*  pause */ }
-  #shapes .shape {
+  #joe .shape {
     float: left;
     margin-right: 5px;
     position: relative; }
-  #shapes .shape::before,
-  #shapes .shape::after {
+  #joe .shape::before,
+  #joe .shape::after {
     content: "";
     position: absolute;
     z-index: -1; }
-  #shapes .shape::before {
+  #joe .shape::before {
     animation: static1 2s;
     animation-delay: 2s; }
-  #shapes .shape::after {
+  #joe .shape::after {
     animation: static2 2s;
     animation-delay: 2s; }
-  #shapes #line {
+  #joe #line {
     border-top: solid 5px white;
     border-bottom: solid 5px white;
     border-left: solid 35px white;
-    width: 100%;
+    width: calc(100% - 35px);
     height: 15px;
     margin: 12.5px 0;
     position: absolute; }
-  #shapes #triangle,
-  #shapes #triangle::before,
-  #shapes #triangle::after {
+  #joe #triangle,
+  #joe #triangle::before,
+  #joe #triangle::after {
     height: 0;
     width: 0;
     border: 0 solid transparent;
-    border-bottom: 50px solid black;
+    border-bottom: 50px solid #4a4a4a;
     border-left-width: 50px; }
-  #shapes #triangle::before {
+  #joe #triangle::before {
     border-bottom: 50px solid rgba(255, 92, 66, 0.75); }
-  #shapes #triangle::after {
+  #joe #triangle::after {
     border-bottom: 50px solid rgba(0, 180, 217, 0.75); }
-  #shapes #triangle::before,
-  #shapes #triangle::after {
+  #joe #triangle::before,
+  #joe #triangle::after {
     margin-left: -50px; }
-  #shapes #square,
-  #shapes #square::before,
-  #shapes #square::after {
+  #joe #square,
+  #joe #square::before,
+  #joe #square::after {
     height: 50px;
     width: 50px;
-    background: #000; }
-  #shapes #circle,
-  #shapes #circle::before,
-  #shapes #circle::after {
+    background: #4a4a4a; }
+  #joe #circle,
+  #joe #circle::before,
+  #joe #circle::after {
     height: 50px;
     width: 50px;
-    background: #000;
+    background: #4a4a4a;
     border-radius: 100px; }
-  #shapes #circle::before,
-  #shapes #square::before {
+  #joe #circle::before,
+  #joe #square::before {
     background: rgba(255, 92, 66, 0.75); }
-  #shapes #circle::after,
-  #shapes #square::after {
+  #joe #circle::after,
+  #joe #square::after {
     background: rgba(0, 180, 217, 0.75); }
 
 @keyframes static1 {
@@ -616,47 +620,17 @@ h1, h2, h3 {
   50% {
     opacity: 0; } }
 
-.arcade-machine {
-  display: grid;
-  grid-gap: 1px;
-  grid-template-columns: repeat(12, [col] auto);
-  grid-template-rows: repeat(3, [row] auto);
-  margin: auto;
-  background-color: black; }
-  .arcade-machine > div {
-    background-color: darkslateblue; }
-  .arcade-machine .marquee {
-    grid-column: col 1 / span  12;
-    grid-row: row; }
-  .arcade-machine .monitor {
-    background: repeating-linear-gradient(to bottom, #0f0a1e, #0f0a1e 2px, #140e29 2px, #140e29 4px);
-    grid-column: col / span 12;
-    grid-row: row 2 / span 5; }
-  .arcade-machine .control-panel {
-    grid-column: col / span  12;
-    grid-row: row 6; }
-    .arcade-machine .control-panel .joystick {
-      /* xyz */ }
-    .arcade-machine .control-panel .button {
-      /* xyz */ }
-  .arcade-machine .bottom-panel {
-    grid-column: col / span  12;
-    grid-row: row 7; }
-    .arcade-machine .bottom-panel .service-door {
-      /* xyz */ }
-    .arcade-machine .bottom-panel .coin-door {
-      /* xyz */ }
-    .arcade-machine .bottom-panel .speaker {
-      /* xyz */ }
+.home-container {
+  display: block;
+  margin: auto; }
+  .home-container .sidebar-container, .home-container .search-result-container {
+    padding: 60px 45px; }
 
-@media only screen and (min-width: 1400px) {
-  .arcade-machine {
-    width: 1400px; }
-    .arcade-machine .marquee {
-      height: 400px; }
-    .arcade-machine .monitor {
-      height: 600px; }
-    .arcade-machine .control-panel {
-      height: 400px; }
-    .arcade-machine .bottom-panel {
-      height: 400px; } }
+@media (min-width: 768px) {
+  .home-container {
+    display: flex;
+    flex-wrap: nowrap; }
+    .home-container .sidebar-container {
+      flex: 40; }
+    .home-container .search-result-container {
+      flex: 60; } }

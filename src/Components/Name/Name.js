@@ -7,7 +7,7 @@ class Name extends Component {
 
     render() {
         return (
-            <div id="shapes">
+            <div id="joe">
                 <div id="triangle" className="shape"/>
                 <div id="circle" className="shape"/>
                 <div id="square" className="shape"/>
