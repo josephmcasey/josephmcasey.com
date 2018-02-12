@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {InstantSearch, Hits, SearchBox, Highlight, RefinementList, Pagination, CurrentRefinements, ClearAll} from 'react-instantsearch/dom';
 
 import ContentCard from "../ContentCard/ContentCard";
 
@@ -10,17 +11,8 @@ class Sidebar extends Component {
     render() {
         return (
             <div className="search-result-container">
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
-                <ContentCard/>
+                <Hits hitComponent={ContentCard} />
+                <Pagination />
             </div>
         )
     }

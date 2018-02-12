@@ -8,6 +8,9 @@ import Footer from "../../Components/Footer/Footer";
 class ContentCard extends Component {
 
     render() {
+
+        console.log("this.props.hit: ", this.props.hit);
+
         return (
             <div className="content-container">
                 <div className="number">.001</div>
