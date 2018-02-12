@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito|Nunito+Sans");
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,400,800");
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -442,14 +442,21 @@ body {
   color: #222222;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-html, body, h4, h5, h6, p {
-  font-family: 'Nunito Sans', sans-serif; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  color: #222222; }
+
+h1 {
+  font-weight: 800; }
 
 /**
  * Headers should generally use the same fonts.
  */
-h1, h2, h3 {
-  font-family: 'Nunito', sans-serif; }
+html, body, p, div, span {
+  font-family: 'Raleway', serif; }
+
+p {
+  font-weight: 200; }
 
 /**
  * Clear inner floats

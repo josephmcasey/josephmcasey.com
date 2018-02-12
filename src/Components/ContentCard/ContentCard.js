@@ -11,7 +11,8 @@ class ContentCard extends Component {
         return (
             <div className="content-container">
                 <div className="number">.001</div>
-                <img className="image" src="http://lorempixel.com/400/200" />
+                <img className="image" />
+                {/*"http://lorempixel.com/400/200"*/}
                 <div className="title">Title</div>
                 <div className="title_sub">Subtitle</div>
                 <a href="https://www.example.com" target="_blank"/>
