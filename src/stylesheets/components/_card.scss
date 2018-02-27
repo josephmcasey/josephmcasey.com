@@ -1,0 +1,26 @@
+.card {
+
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  & > .identifer {
+    font-variant-caps: all-petite-caps;
+    color: whitesmoke;
+    text-align: right;
+    margin: 16px;
+  }
+
+  &-generic {
+    background-color: #434343;
+  }
+
+  &-twitter {
+    background-color: #3e80ed;
+  }
+
+  &-medium {
+    background-color: #5ec232;
+  }
+
+}

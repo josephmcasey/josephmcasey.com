@@ -429,11 +429,8 @@ html, body, #root {
  * Basic styles for links
  */
 a {
-  color: #e50050;
+  color: #222222;
   text-decoration: none; }
-  a:hover, a:active, a:focus {
-    color: #222222;
-    text-decoration: underline; }
 
 /**
  * Basic typography style for copy text
@@ -452,8 +449,8 @@ h1 {
 /**
  * Headers should generally use the same fonts.
  */
-html, body, p, div, span {
-  font-family: 'Raleway', serif; }
+html, body, p, div, span, a {
+  font-family: 'Raleway', sans-serif; }
 
 p {
   font-weight: 200; }
@@ -626,6 +623,27 @@ p {
     opacity: 1; }
   50% {
     opacity: 0; } }
+
+.library > .isolated {
+  width: 500px;
+  height: 500px;
+  margin: 250px auto; }
+
+.card {
+  display: block;
+  height: 100%;
+  width: 100%; }
+  .card > .identifer {
+    font-variant-caps: all-petite-caps;
+    color: whitesmoke;
+    text-align: right;
+    margin: 16px; }
+  .card-generic {
+    background-color: #434343; }
+  .card-twitter {
+    background-color: #3e80ed; }
+  .card-medium {
+    background-color: #5ec232; }
 
 .home-container {
   display: block;
