@@ -2,14 +2,12 @@
  * Basic typography style for copy text
  */
 body {
-  color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
-  color: $text-color;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 h1 {
@@ -20,9 +18,18 @@ h1 {
  * Headers should generally use the same fonts.
  */
 html, body, p, div, span, a {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Fira Mono', monospace;
+  letter-spacing: -0.05em;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
-  font-weight: 200;
+  font-size: 0.9rem
+}
+
+time {
+  font-size: 0.7rem
 }

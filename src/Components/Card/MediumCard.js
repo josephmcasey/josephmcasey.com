@@ -16,8 +16,7 @@ export default class MediumCard extends GenericCard {
 
         return (
             <a className="card card-medium" href={this.state.link} target="_blank">
-                <div className="identifer">{this.state.id}</div>
-                { this.state.image ? <img className="image" alt="" src={this.state.image}/> : null }
+                <div className="identifier">{this.state.id}</div>
                 <div className="title">{title}</div>
                 <div className="title_sub">{subtitle}</div>
                 <p>{teaser}</p>

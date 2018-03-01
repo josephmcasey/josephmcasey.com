@@ -17,7 +17,7 @@ export default class TwitterCard extends GenericCard {
 
         return (
             <a className="card card-twitter" href={this.state.link} target="_blank">
-                <div className="identifer">{this.state.id}</div>
+                <div className="identifier">{this.state.id}</div>
                 <div className="title_sub">{tweet}</div>
                 <time>{this.state.date}</time>
             </a>

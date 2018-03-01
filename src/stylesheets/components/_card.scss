@@ -1,26 +1,21 @@
 .card {
-
-  display: block;
+  display: grid;
   height: 100%;
   width: 100%;
+  padding: 16px;
+  border: solid 1px;
+  grid-template-rows: 30px 40px 35px auto 28px;
 
-  & > .identifer {
+  & > .identifier {
     font-variant-caps: all-petite-caps;
-    color: whitesmoke;
     text-align: right;
-    margin: 16px;
   }
 
-  &-generic {
-    background-color: #434343;
+  & > .title {
+    text-transform: uppercase;
   }
 
-  &-twitter {
-    background-color: #3e80ed;
+  & > time {
+    text-align: right;
   }
-
-  &-medium {
-    background-color: #5ec232;
-  }
-
 }

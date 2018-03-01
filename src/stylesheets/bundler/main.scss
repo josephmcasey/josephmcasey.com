@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,400,800');
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Share+Tech+Mono');
 
 // 1. Configuration and helpers
 @import '../abstracts/variables',
@@ -27,6 +27,3 @@
 
 // 6. Page-specific styles
 @import '../pages/home';
-
-// 7. Themes
-@import '../themes/default';

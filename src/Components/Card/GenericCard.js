@@ -14,14 +14,14 @@ class GenericCard extends Component {
     render() {
         console.log('GenericCard: ', this.state)
 
-        const {primary, secondary, image} = this.state.data
+        const {primary, secondary, content} = this.state.data
 
         return (
             <a className="card card-generic" href={this.state.link} target="_blank">
-                <div className="identifer">{this.state.id}</div>
-                { image ? <img className="image" alt="" src={image}/> : null }
-                <div className="title">{primary}</div>
-                <div className="title_sub">{secondary}</div>
+                <small className="identifier">{this.state.id}</small>
+                <h1 className="title">{primary}</h1>
+                <h2 className="title_sub">{secondary}</h2>
+                <p>{content}</p>
                 <time>{this.state.date}</time>
             </a>
         )

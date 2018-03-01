@@ -24,12 +24,6 @@ html, body, #root {
 *::before,
 *::after {
   box-sizing: inherit;
-}
-
-/**
- * Basic styles for links
- */
-a {
   color: $text-color;
-  text-decoration: none;
+  background-color: $background-color;
 }
