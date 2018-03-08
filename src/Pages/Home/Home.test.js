@@ -1,8 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './Home';
+import { shallow } from 'enzyme';
+import Home from './Home';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+it('renders welcome message', () => {
+  const wrapper = shallow(<Home />);
+  const welcome = <h2>Welcome to React</h2>;
+  expect(wrapper).toContainReact(welcome);
 });

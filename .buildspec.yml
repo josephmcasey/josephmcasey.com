@@ -1,0 +1,31 @@
+version: 0.2
+phases:
+    install:
+        commands:
+            # Yarn installation
+            - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            - sudo apt-get -y update
+            - apt-get install -y yarn
+            # Installing serverless globally
+            - yarn global add serverless
+            - yarn -v
+            # Installing dependencies
+            - yarn install
+    pre_build:
+        commands:
+            # Pulling the environment files from private bucket
+            - aws s3 cp s3://<ENV-FILES-BUCKET>/react ../ --recursive
+            # CloudFront configuration
+            - aws configure set preview.cloudfront true
+            # Run Automated Tests
+            - yarn test
+    build:
+        commands:
+            # Build Application
+            - yarn build
+
+artifacts:
+    files:
+        - build/**/*
+    discard-paths: yes

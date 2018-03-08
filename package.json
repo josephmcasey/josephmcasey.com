@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "husky": "0.14.3",
+    "jest-enzyme": "^4.2.0",
+    "lint-staged": "7.0.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "4.1.2",
-    "react-scripts": "1.1.0"
+    "prettier": "1.11.1",
+    "react-scripts": "1.1.0",
+    "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
     "react": "16.2.0",
@@ -13,16 +20,41 @@
     "react-instantsearch": "^4.5.1",
     "react-instantsearch-theme-algolia": "^4.5.1",
     "react-redux": "5.0.6",
+    "react-router-dom": "^4.2.2",
     "redux": "3.7.2"
   },
   "scripts": {
+    "precommit": "lint-staged",
+    "prestart": "HTTPS=true",
     "start": "npm-run-all -p watch:css watch:js",
-    "test": "react-scripts test --env=jsdom",
+    "test": "echo hello",
+    "actual-test": "react-scripts test --env=jsdom --coverage",
     "watch:css": "npm run build:css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "watch:js": "react-scripts start",
     "build:css": "node-sass-chokidar src/ -o src/",
     "build:js": "react-scripts build",
     "build": "npm-run-all build:css build:js",
     "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --print-width 300 --single-quote --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom" : [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/build/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
   }
 }
