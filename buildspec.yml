@@ -14,10 +14,6 @@ phases:
             - yarn install
     pre_build:
         commands:
-            # Pulling the environment files from private bucket
-            - aws s3 cp s3://<ENV-FILES-BUCKET>/react ../ --recursive
-            # CloudFront configuration
-            - aws configure set preview.cloudfront true
             # Run Automated Tests
             - yarn test
     build:
