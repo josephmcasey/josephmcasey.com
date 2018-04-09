@@ -1,7 +1,7 @@
 import React from 'react';
-import GenericCard from './GenericCard';
+import Card from './Card';
 
-export default class TwitterCard extends GenericCard {
+export default class TwitterCard extends Card {
   constructor(props) {
     super(props);
   }

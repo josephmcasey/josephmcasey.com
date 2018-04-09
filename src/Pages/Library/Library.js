@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GenericCard from '../../Components/Card/GenericCard';
+import Card from '../../Components/Card/Card';
 import MediumCard from '../../Components/Card/MediumCard';
 import TwitterCard from '../../Components/Card/TwitterCard';
 
@@ -51,7 +51,7 @@ export default class Library extends Component {
     return (
       <div className="library">
         <div className="isolated">
-          <GenericCard state={content[0]} />
+          <Card state={content[0]} />
         </div>
         <div className="isolated">
           <MediumCard state={content[1]} />

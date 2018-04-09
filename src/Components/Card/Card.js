@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 /**
  * Interactively offers options of playing the arcade machine or viewing other content
  */
-class GenericCard extends Component {
+class Card extends Component {
   constructor(props) {
     super(props);
 
@@ -11,7 +11,7 @@ class GenericCard extends Component {
   }
 
   render() {
-    console.log('GenericCard: ', this.state);
+    console.log('Card: ', this.state);
 
     const { primary, secondary, content } = this.state.data;
 
@@ -27,4 +27,4 @@ class GenericCard extends Component {
   }
 }
 
-export default GenericCard;
+export default Card;

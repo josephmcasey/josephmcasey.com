@@ -6,3 +6,9 @@
 
 node_modules
 build
+
+# Dependency Management Files
+yarn-error.log
+
+# Test Files
+coverage/

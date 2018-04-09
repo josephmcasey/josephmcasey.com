@@ -1,7 +1,7 @@
 import React from 'react';
-import GenericCard from './GenericCard';
+import Card from './Card';
 
-export default class MediumCard extends GenericCard {
+export default class MediumCard extends Card {
   constructor(props) {
     super(props);
   }
