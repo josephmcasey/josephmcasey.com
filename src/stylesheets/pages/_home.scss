@@ -11,24 +11,3 @@
   }
 
 }
-
-@include respond-to(medium) {
-
-  .home-container{
-    display: flex;
-    flex-wrap: nowrap;
-
-    & .sidebar-container {
-      flex: 40;
-
-      & .sidebar-content{
-        position: fixed;
-      }
-    }
-    & .search-result-container {
-      flex: 60;
-    }
-
-  }
-
-}
