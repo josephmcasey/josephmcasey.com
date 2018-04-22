@@ -1,24 +1,20 @@
-import React from 'react';
-import Card from './Card';
+import React, { Component } from 'react';
+import withCardLayout from './withCardLayout';
 
-export default class MediumCard extends Card {
-  constructor(props) {
-    super(props);
-  }
-
-  render(a, b, c) {
-    console.log('MediumCard: ', this.state);
-
-    const { title, subtitle, teaser } = this.state.data;
+class MediumContent extends Component {
+  render() {
+    const { title, teaser, publishedDate } = this.props.data;
 
     return (
-      <a className="card card-medium" href={this.state.link} target="_blank">
-        <div className="identifier">{this.state.id}</div>
+      <React.Fragment>
         <div className="title">{title}</div>
-        <div className="title_sub">{subtitle}</div>
         <p>{teaser}</p>
-        <time>{this.state.date}</time>
-      </a>
+        <time>{publishedDate}</time>
+      </React.Fragment>
     );
   }
 }
+
+const MediumCard = withCardLayout(MediumContent);
+
+export default MediumCard;

@@ -6,8 +6,8 @@
   display: block;
   margin: auto;
 
-  & .sidebar-container, & .search-result-container {
-    padding: 60px 45px;
+  & .sidebar-container, & .search-result-container, & footer {
+    padding: 60px 45px 0;
   }
 
 }

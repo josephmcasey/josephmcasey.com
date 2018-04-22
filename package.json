@@ -7,19 +7,19 @@
     "lint-staged": "7.0.4",
     "node-sass-chokidar": "1.2.2",
     "npm-run-all": "4.1.2",
-    "prettier": "^1.11.1",
+    "prettier": "^1.12.1",
     "react-scripts": "1.1.4",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.3.2"
   },
   "dependencies": {
     "global": "^4.3.2",
-    "react": "16.3.1",
-    "react-dom": "16.3.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "react-instantsearch": "5.0.3",
     "react-instantsearch-theme-algolia": "4.5.2",
     "react-redux": "5.0.7",
     "react-router-dom": "4.2.2",
-    "redux": "3.7.2"
+    "redux": "^4.0.0"
   },
   "scripts": {
     "precommit": "lint-staged",

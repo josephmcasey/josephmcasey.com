@@ -1,61 +1,168 @@
-@import url("https://fonts.googleapis.com/css?family=Fira+Mono|Share+Tech+Mono");
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Share+Tech+Mono');
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
-ol, ul {
-  list-style: none; }
+ol,
+ul {
+  list-style: none;
+}
 
-blockquote, q {
-  quotes: none; }
+blockquote,
+q {
+  quotes: none;
+}
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
+
+input.ais-SearchBox-input {
+  width: 100%;
+  height: 3rem;
+  font-size: xx-large;
+  border: solid;
+  outline-offset: 0;
+}
+
+button.ais-SearchBox-submit {
+  display: none;
+}
+
+button.ais-SearchBox-reset {
+  display: none;
+}
 
 /**
  * Set up a decent box model on the root element
  */
-html, body, #root {
+html,
+body,
+#root {
   position: absolute;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   margin: auto;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -68,35 +175,53 @@ html, body, #root {
 *::after {
   box-sizing: inherit;
   color: #222222;
-  background-color: #fbfbfb; }
+  background-color: #fbfbfb;
+}
 
 /**
  * Basic typography style for copy text
  */
 body {
-  font: normal 125%/1.4 "Share Tech Mono", monospace; }
+  font: normal 125%/1.4 'Share Tech Mono', monospace;
+}
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Share Tech Mono', monospace; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Share Tech Mono', monospace;
+}
 
 h1 {
-  font-weight: 800; }
+  font-weight: 800;
+}
 
 /**
  * Headers should generally use the same fonts.
  */
-html, body, p, div, span, a {
+html,
+body,
+p,
+div,
+span,
+a {
   font-family: 'Fira Mono', monospace;
-  letter-spacing: -0.05em; }
+  letter-spacing: -0.05em;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 p {
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+}
 
 time {
-  font-size: 0.7rem; }
+  font-size: 0.7rem;
+}
 
 /**
  * Clear inner floats
@@ -104,7 +229,8 @@ time {
 .clearfix::after {
   clear: both;
   content: '';
-  display: table; }
+  display: table;
+}
 
 /**
  * Main content containers
@@ -124,7 +250,8 @@ time {
   padding-right: 20px;
   /* 3 */
   width: 100%;
-  /* 1 */ }
+  /* 1 */
+}
 
 /**
  * Hide text while making it readable for screen readers
@@ -136,7 +263,8 @@ time {
   padding: 0;
   /* 1 */
   text-indent: 101%;
-  white-space: nowrap; }
+  white-space: nowrap;
+}
 
 /**
  * Hide element while making it readable for screen readers
@@ -151,13 +279,16 @@ time {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  width: 1px; }
+  width: 1px;
+}
 
 .git-keep {
-  display: none; }
+  display: none;
+}
 
 .git-keep {
-  display: none; }
+  display: none;
+}
 
 #joe {
   box-sizing: content-box;
@@ -168,109 +299,142 @@ time {
   /* Animations */
   /* static 1 */
   /* static 2 */
-  /*  pause */ }
-  #joe .shape {
-    float: left;
-    margin-right: 5px;
-    position: relative; }
-  #joe .shape::before,
-  #joe .shape::after {
-    content: "";
-    position: absolute;
-    z-index: -1; }
-  #joe .shape::before {
-    animation: static1 2s;
-    animation-delay: 2s; }
-  #joe .shape::after {
-    animation: static2 2s;
-    animation-delay: 2s; }
-  #joe #line {
-    border-top: solid 5px white;
-    border-bottom: solid 5px white;
-    border-left: solid 35px white;
-    width: calc(100% - 35px);
-    height: 15px;
-    margin: 12.5px 0;
-    position: absolute; }
-  #joe #triangle,
-  #joe #triangle::before,
-  #joe #triangle::after {
-    height: 0;
-    width: 0;
-    border: 0 solid transparent;
-    border-bottom: 50px solid #4a4a4a;
-    border-left-width: 50px; }
-  #joe #triangle::before {
-    border-bottom: 50px solid rgba(255, 92, 66, 0.75); }
-  #joe #triangle::after {
-    border-bottom: 50px solid rgba(0, 180, 217, 0.75); }
-  #joe #triangle::before,
-  #joe #triangle::after {
-    margin-left: -50px; }
-  #joe #square,
-  #joe #square::before,
-  #joe #square::after {
-    height: 50px;
-    width: 50px;
-    background: #4a4a4a; }
-  #joe #circle,
-  #joe #circle::before,
-  #joe #circle::after {
-    height: 50px;
-    width: 50px;
-    background: #4a4a4a;
-    border-radius: 100px; }
-  #joe #circle::before,
-  #joe #square::before {
-    background: rgba(255, 92, 66, 0.75); }
-  #joe #circle::after,
-  #joe #square::after {
-    background: rgba(0, 180, 217, 0.75); }
+  /*  pause */
+}
+#joe .shape {
+  float: left;
+  margin-right: 5px;
+  position: relative;
+}
+#joe .shape::before,
+#joe .shape::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+#joe .shape::before {
+  animation: static1 2s;
+  animation-delay: 2s;
+}
+#joe .shape::after {
+  animation: static2 2s;
+  animation-delay: 2s;
+}
+#joe #line {
+  border-top: solid 5px white;
+  border-bottom: solid 5px white;
+  border-left: solid 35px white;
+  width: calc(100% - 35px);
+  height: 15px;
+  margin: 12.5px 0;
+  position: absolute;
+}
+#joe #triangle,
+#joe #triangle::before,
+#joe #triangle::after {
+  height: 0;
+  width: 0;
+  border: 0 solid transparent;
+  border-bottom: 50px solid #4a4a4a;
+  border-left-width: 50px;
+}
+#joe #triangle::before {
+  border-bottom: 50px solid rgba(255, 92, 66, 0.75);
+}
+#joe #triangle::after {
+  border-bottom: 50px solid rgba(0, 180, 217, 0.75);
+}
+#joe #triangle::before,
+#joe #triangle::after {
+  margin-left: -50px;
+}
+#joe #square,
+#joe #square::before,
+#joe #square::after {
+  height: 50px;
+  width: 50px;
+  background: #4a4a4a;
+}
+#joe #circle,
+#joe #circle::before,
+#joe #circle::after {
+  height: 50px;
+  width: 50px;
+  background: #4a4a4a;
+  border-radius: 100px;
+}
+#joe #circle::before,
+#joe #square::before {
+  background: rgba(255, 92, 66, 0.75);
+}
+#joe #circle::after,
+#joe #square::after {
+  background: rgba(0, 180, 217, 0.75);
+}
 
 @keyframes static1 {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
-    left: 0; }
+    left: 0;
+  }
   20% {
     top: -5px;
-    left: -5px; }
+    left: -5px;
+  }
   40% {
     top: 5px;
-    left: -5px; }
+    left: -5px;
+  }
   60% {
     top: 5px;
-    left: 5px; }
+    left: 5px;
+  }
   80% {
     top: 5px;
-    left: -5px; } }
+    left: -5px;
+  }
+}
 
 @keyframes static2 {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
-    left: 0; }
+    left: 0;
+  }
   20% {
     top: 5px;
-    left: 5px; }
+    left: 5px;
+  }
   40% {
     top: -5px;
-    left: 5px; }
+    left: 5px;
+  }
   60% {
     top: -5px;
-    left: -5px; }
+    left: -5px;
+  }
   80% {
     top: -5px;
-    left: 5px; } }
+    left: 5px;
+  }
+}
 
 @keyframes pause {
-  0%, 100% {
-    opacity: 1; }
+  0%,
+  100% {
+    opacity: 1;
+  }
   50% {
-    opacity: 0; } }
+    opacity: 0;
+  }
+}
 
 .library > .isolated {
   width: 500px;
   height: 500px;
-  margin: 250px auto; }
+  margin: 250px auto;
+}
 
 .card {
   display: grid;
@@ -278,28 +442,41 @@ time {
   width: 100%;
   padding: 16px;
   border: solid 1px;
-  grid-template-rows: 30px 40px 35px auto 28px; }
-  .card > .identifier {
-    font-variant-caps: all-petite-caps;
-    text-align: right; }
-  .card > .title {
-    text-transform: uppercase; }
-  .card > time {
-    text-align: right; }
+  grid-template-rows: 30px 40px 35px auto 28px;
+}
+.card > .identifier {
+  font-variant-caps: all-petite-caps;
+  text-align: right;
+}
+.card > .title {
+  text-transform: uppercase;
+}
+.card > time {
+  text-align: right;
+}
 
 .home-container {
   display: block;
-  margin: auto; }
-  .home-container .sidebar-container, .home-container .search-result-container {
-    padding: 60px 45px; }
+  margin: auto;
+}
+.home-container .sidebar-container,
+.home-container .search-result-container,
+.home-container footer {
+  padding: 60px 45px 0;
+}
 
 @media (min-width: 768px) {
   .home-container {
     display: flex;
-    flex-wrap: nowrap; }
-    .home-container .sidebar-container {
-      flex: 40; }
-      .home-container .sidebar-container .sidebar-content {
-        position: fixed; }
-    .home-container .search-result-container {
-      flex: 60; } }
+    flex-wrap: nowrap;
+  }
+  .home-container .sidebar-container {
+    flex: 40;
+  }
+  .home-container .sidebar-container .sidebar-content {
+    position: fixed;
+  }
+  .home-container .search-result-container {
+    flex: 60;
+  }
+}

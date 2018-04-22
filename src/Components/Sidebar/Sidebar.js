@@ -8,8 +8,9 @@ class Sidebar extends Component {
         <div className="sidebar-content">
           <h1>Joseph Casey</h1>
           <p>Developer, Originator, & Contriver. Search through my work below.</p>
-          <SearchBox defaultRefinement="Tech Articles" />
         </div>
+        <br />
+        <SearchBox />
       </header>
     );
   }

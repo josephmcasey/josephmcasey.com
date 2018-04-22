@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Card from '../../Components/Card/Card';
+import Card from '../../Components/Card/withCardLayout';
 import MediumCard from '../../Components/Card/MediumCard';
-import TwitterCard from '../../Components/Card/TwitterCard';
+import ProfileCard from '../../Components/Card/SocialMediaCard';
 
 export default class Library extends Component {
   constructor(props) {
@@ -10,35 +10,93 @@ export default class Library extends Component {
     this.state = {
       content: [
         {
-          id: 'g.1',
-          link: 'https://www.example.com',
-          date: new Date().toString(),
-          type: 'generic',
+          type: 'platform',
           data: {
-            primary: 'Primary Text',
-            secondary: 'Secondary Text',
-            content:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            title: 'Twitter',
+            subtitle: 'Read my passing thoughts',
+            url: 'https://twitter.com/josephmcasey',
+            icon: 'twitter'
           }
         },
         {
-          id: 'm.1',
-          link: 'https://www.example.com',
-          date: new Date().toString(),
-          type: 'medium',
+          type: 'platform',
           data: {
-            title: 'Star Wars',
-            subtitle: 'Return of the Jedi',
-            teaser: 'A long time ago in a galaxy far far away '
+            title: 'CodePen',
+            subtitle: 'Look at a few frontend experiments on CodePen',
+            url: 'https://codepen.io/josephmcasey',
+            icon: 'codepen'
           }
         },
         {
-          id: 't.1',
-          link: 'https://www.example.com',
-          date: new Date().toString(),
-          type: 'twitter',
+          type: 'platform',
           data: {
-            tweet: 'My favorite drink is covfefe.'
+            title: 'Instagram',
+            subtitle: 'Take a look at a few things I saw.',
+            url: 'https://www.instagram.com/josephmcasey',
+            icon: 'instagram'
+          }
+        },
+        {
+          type: 'platform',
+          data: {
+            title: 'GitHub',
+            subtitle: 'Help contribute to a few of my OSS projects',
+            url: 'https://www.github.com/josephmcasey',
+            icon: 'github'
+          }
+        },
+        {
+          type: 'platform',
+          data: {
+            title: 'Gists',
+            subtitle: 'Look at a few of my favorite code samples',
+            url: 'https://gist.github.com/josephmcasey',
+            icon: 'codepen'
+          }
+        },
+        {
+          type: 'platform',
+          data: {
+            title: 'Repl.It',
+            subtitle: 'Tinker away with a few running REPLs',
+            url: 'https://repl.it/@josephmcasey',
+            icon: 'replit'
+          }
+        },
+        {
+          type: 'platform',
+          data: {
+            title: 'Stackoverflow',
+            subtitle: 'Help me answer a few questions',
+            url: 'https://stackoverflow.com/users/1596825/josephmcasey',
+            icon: 'stackoverflow'
+          }
+        },
+        {
+          type: 'platform',
+          data: {
+            title: 'Medium',
+            subtitle: 'Come discuss a few of my thoughts',
+            url: 'https://medium.com/@josephmcasey',
+            icon: 'medium'
+          }
+        },
+        {
+          type: 'platform',
+          data: {
+            title: 'YouTube',
+            subtitle: 'Watch a few videos starring yours truly',
+            url: 'https://www.youtube.com/user/josephmcasey',
+            icon: 'youtube'
+          }
+        },
+        {
+          type: 'platform',
+          data: {
+            title: 'Twitch',
+            subtitle: 'Look at a few experiments on CodePen',
+            url: 'https://www.twitch.tv/josephmcasey',
+            icon: 'twitch'
           }
         }
       ]
@@ -51,13 +109,10 @@ export default class Library extends Component {
     return (
       <div className="library">
         <div className="isolated">
-          <Card state={content[0]} />
-        </div>
-        <div className="isolated">
           <MediumCard state={content[1]} />
         </div>
         <div className="isolated">
-          <TwitterCard state={content[2]} />
+          <ProfileCard state={content[2]} />
         </div>
       </div>
     );

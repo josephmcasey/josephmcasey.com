@@ -7,7 +7,8 @@
 '../abstracts/mixins';
 
 // 2. Vendors
-@import '../vendor/normalize';
+@import '../vendor/normalize',
+'../vendor/algolia';
 
 // 3. Base stuff
 @import '../base/base',
@@ -22,8 +23,7 @@
 // 5. Components
 @import '../components/name',
 '../components/library',
-'../components/card',
-'../components/searchBox';
+'../components/card';
 
 // 6. Page-specific styles
 @import '../pages/home';
