@@ -3,6 +3,8 @@ phases:
     install:
         commands:
             # Yarn installation
+            - node -v
+            - npm -v
             - npm install
     pre_build:
         commands:
